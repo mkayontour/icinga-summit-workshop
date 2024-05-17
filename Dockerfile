@@ -6,7 +6,7 @@ RUN mv /home/eduk8s/workshop /opt/workshop
 
 RUN mv /home/eduk8s/resources /opt/resources
 
-RUN rm README.de
+RUN rm README.md
 
 RUN rm Dockerfile
 
