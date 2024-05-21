@@ -17,4 +17,4 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: lab-icinga-summit-workshop # Provide Docker image name
-        image-tag: main # Provide Docker image tag
+        image-tag: v1.0 # Provide Docker image tag

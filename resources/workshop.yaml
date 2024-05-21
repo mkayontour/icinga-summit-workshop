@@ -17,22 +17,15 @@ spec:
     - icinga
   publish:
     image: "$(image_repository)/lab-icinga-summit-workshop-files:$(workshop_version)"
+  workshop:
+    image: 'ghcr.io/mkayontour/icinga-summit-workshop/lab-icinga-summit-workshop:v1.0'
     files:
-    - directory:
-        path: .
+    - image:
+        url: "$(image_repository)/lab-icinga-summit-workshop-files:$(workshop_version)"
       includePaths:
       - /workshop/**
-      - /templates/**
+      - /exercises/**
       - /README.md
-  workshop:
-    image: 'ghcr.io/mkayontour/icinga-summit-workshop/lab-icinga-summit-workshop:main'
-    #files:
-    #- image:
-        #url: "$(image_repository)/lab-icinga-summit-workshop-files:$(workshop_version)"
-      #includePaths:
-    #  - /workshop/**
-      #- /exercises/**
-    #  - /README.md
   session:
     namespaces:
       budget: default
