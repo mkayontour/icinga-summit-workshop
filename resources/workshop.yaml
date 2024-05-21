@@ -8,7 +8,7 @@ spec:
   url: https://github.com/mkayontour/icinga-summit-workshop
   difficulty: beginner
   duration: 30m
-  vendor: nws.netways.de
+  vendor: NETWAYS Professional Services GmbH (netways.de)
   authors:
     - Thilo Wening
   tags:
@@ -17,14 +17,22 @@ spec:
     - icinga
   publish:
     image: "$(image_repository)/lab-icinga-summit-workshop-files:$(workshop_version)"
-  workshop:
     files:
-    - image:
-        url: "$(image_repository)/lab-icinga-summit-workshop-files:$(workshop_version)"
+    - directory:
+        path: .
       includePaths:
       - /workshop/**
-      - /exercises/**
+      - /templates/**
       - /README.md
+  workshop:
+    image: 'ghcr.io/mkayontour/icinga-summit-workshop/lab-icinga-summit-workshop:main'
+    #files:
+    #- image:
+        #url: "$(image_repository)/lab-icinga-summit-workshop-files:$(workshop_version)"
+      #includePaths:
+    #  - /workshop/**
+      #- /exercises/**
+    #  - /README.md
   session:
     namespaces:
       budget: default
