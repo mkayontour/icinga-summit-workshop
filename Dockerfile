@@ -12,6 +12,8 @@ RUN ansible-galaxy collection install community.mysql
 
 RUN ansible-galaxy role install geerlingguy.mysql
 
+RUN pip install python-openstackclient
+
 COPY --chown=1001:0 . /home/eduk8s/
 
 RUN mv /home/eduk8s/workshop /opt/workshop
