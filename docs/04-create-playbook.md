@@ -74,4 +74,4 @@ mysql_databases:
     encoding: utf8mb4
 ```
 
-If this step is done - proceed to the next [step Prepare Role Icinga2](docs/05-prepare-role-icinga2.md)
+If this step is done - proceed to the next [step Prepare Role Icinga2](05-prepare-role-icinga2.md)

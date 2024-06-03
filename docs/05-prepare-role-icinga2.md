@@ -52,4 +52,4 @@ After editing the variables, include them and the role in the play.
     - icinga.icinga.icinga2 # Add this line
 ```
 
-If this step is done - proceed to the next [step Prepare IcingaDB](docs/06-prepare-icingadb.md)
+If this step is done - proceed to the next [step Prepare IcingaDB](06-prepare-icingadb.md)

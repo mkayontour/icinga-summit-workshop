@@ -56,4 +56,4 @@ icingaweb2_modules:
         host: localhost
 ```
 
-If this step is done - proceed to the next [step Run Plabook](docs/08-run-playbook.md)
+If this step is done - proceed to the next [step Run Plabook](08-run-playbook.md)

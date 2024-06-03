@@ -31,4 +31,4 @@ If this command doesn't show a similar output please install the collection:
 ansible-galaxy collection install community.mysql
 ```
 
-If this step is done - proceed to the next [step Build local inventory](docs/03-build-local-inventory.md)
+If this step is done - proceed to the next [step Build local inventory](03-build-local-inventory.md)

@@ -20,4 +20,4 @@ vim ~/workshop/play_icinga.yml
     - icinga.icinga.icingadb_redis #
 ```
 
-If this step is done - proceed to the next [step Prepare IcingaDB](docs/07-prepare-icingaweb2.md)
+If this step is done - proceed to the next [step Prepare IcingaDB](07-prepare-icingaweb2.md)

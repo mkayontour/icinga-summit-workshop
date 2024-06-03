@@ -15,4 +15,4 @@ Test if everything is working, use the following command to check parameters/con
 ansible -m ping -i ~/workshop/inventory icinga-server
 ```
 
-If this step is done - proceed to the next [step Create Playbook](docs/04-create-playbook.md)
+If this step is done - proceed to the next [step Create Playbook](04-create-playbook.md)

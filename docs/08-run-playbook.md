@@ -10,4 +10,4 @@ Afterwards check out your local IP address and access the webinterface.
 
 And login with the username "admin" and password "admin".
 
-If this step is done - proceed to the next [step Extend Environment](docs/09-extend-environment.md)
+If this step is done - proceed to the next [step Extend Environment](09-extend-environment.md)
