@@ -132,6 +132,6 @@ The Director Module should be visible and accessible to you. Happy monitoring :)
 
 ### The End
 
-Thanks for taking part at the workshop. Hopefully you took away a good overview over the Icinga collection and its features.
+Thanks for taking part at the workshop. Hopefully you got a good overview over the Icinga collection and its features.
 
-If you need further assistance with Ansible or Icinga, feel free to reach out to [NETWAYS GmbH](https://netways.de).
+If you need further assistance with Ansible or Icinga, feel free to reach out to [NETWAYS GmbH](https://netways.de) anytime. 
