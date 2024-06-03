@@ -43,6 +43,9 @@ After editing the variables, include them and the role in the play.
 - name: Provision Icinga Server
   hosts: icinga-server
   become: true
+  vars:
+    icinga_repo_subscription_username: icinga-summit-2024
+    icinga_repo_subscription_password: Summit2024
   vars_files:
     - vars_database.yml
     - vars_icinga.yml   # Add this line
