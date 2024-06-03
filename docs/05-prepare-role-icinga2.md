@@ -25,7 +25,7 @@ icinga2_features:
     severity: information
 
 icinga2_objects:
-  icinga-server.localdomain:
+  icinga-server.localdomain:   # This needs to be your local FQDN. Check via "hostname -f"
     - name: root
       type: ApiUser
       password: root
