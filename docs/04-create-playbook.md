@@ -43,16 +43,6 @@ icingaweb2_db:
   user: icingaweb
   password: icingaweb
 
-icingaweb2_resources:
-  icingadb:
-    type: db
-    db: "{{ icingadb_database_type }}"
-    host: "{{ icingadb_database_host }}"
-    dbname: "{{ icingadb_database_name }}"
-    username: "{{ icingadb_database_user }}"
-    password: "{{ icingadb_database_password }}"
-    charset: utf8
-
 mysql_packages:
   - mariadb-client
   - mariadb-server
