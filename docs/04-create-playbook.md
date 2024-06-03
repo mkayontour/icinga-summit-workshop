@@ -21,6 +21,8 @@ vim ~/workshop/play_icinga.yml
 Afterwards we need to prepare our databases. For this we will add the **geerlingguy.mysql** role at the **roles** key.
 
 ```
+vim ~/workshop/play_icinga.yml
+
 - name: Provision Icinga Server
   hosts: icinga-server
   become: true

@@ -40,6 +40,8 @@ icinga2_config_directories:
 After editing the variables, include them and the role in the play.
 
 ```
+vim ~/workshop/play_icinga.yml
+
 - name: Provision Icinga Server
   hosts: icinga-server
   become: true
