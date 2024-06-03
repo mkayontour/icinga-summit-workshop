@@ -6,7 +6,7 @@ Start by creating a ansible directory in your user home and then creating a inve
 ```
 install -d ~/workshop
 ```
-The inventory has a single line.
+The inventory has a single line. 
 ```
 echo "icinga-server ansible_connection=local" > ~/workshop/inventory
 ```
