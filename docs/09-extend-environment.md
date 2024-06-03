@@ -1,6 +1,6 @@
-### Extend Environment
+### Extend Environment with Director and Plugins
 
-#### Add database variables
+#### Add Director database variables
 
 First add new director variables at the **vars_database.yml** file.
 
@@ -32,7 +32,7 @@ mysql_databases:
     encoding: utf8mb4
 ```
 
-#### Add module configuration
+#### Add Director module configuration
 
 Afterwards add the module to **icingaweb2_modules** variable.
 
@@ -56,7 +56,7 @@ icingaweb2_modules:
 
 ```
 
-#### Add resources
+#### Add Director resources
 
 In addition add the resource of our director database to icingaweb2 too.
 
@@ -80,6 +80,45 @@ icingaweb2_resources:
     charset: utf8
 ```
 
+### Add monitoring_plugins
+
+To finish the complete monitoring, we need to install the monitoring_plugins as well.
+
+Add the following variable to the Icinga vars file and add the role monitoring_plugins in the play.
+
+```
+vim ~/workshop/vars_icinga.yml
+
+icinga_monitoring_plugins_check_commands:
+    - "all"
+
+[...]
+```
+
+Add role **monitoring_plugins**.
+
+```
+vim ~/workshop/play_icinga.yml
+
+- name: Provision Icinga Server
+  hosts: icinga-server
+  become: true
+  vars:
+    icinga_repo_subscription_username: icinga-summit-2024
+    icinga_repo_subscription_password: Summit2024
+  vars_files:
+    - vars_database.yml
+    - vars_icinga.yml
+  roles:
+    - icinga.icinga.repos
+    - geerlingguy.mysql
+    - icinga.icinga.icinga2
+    - icinga.icinga.icingadb
+    - icinga.icinga.icingadb_redis
+    - icinga.icinga.monitoring_plugins
+
+```
+
 To run the playbook again use the following command:
 
 `ansible-playbook -i ~/workshop/inventory play_icinga.yml`
@@ -87,6 +126,9 @@ To run the playbook again use the following command:
 Afterwards check out your local IP address and access the webinterface.
 
 The Director Module should be visible and accessible to you. Happy monitoring :)
+
+
+
 
 ### The End
 
