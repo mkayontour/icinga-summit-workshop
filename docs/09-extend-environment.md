@@ -80,6 +80,16 @@ icingaweb2_resources:
     charset: utf8
 ```
 
+To run the playbook again use the following command:
+
+`ansible-playbook -i ~/workshop/inventory play_icinga.yml`
+
+Afterwards check out your local IP address and access the webinterface.
+
+The Director Module should be visible and accessible to you. Happy monitoring :)
+
+### The End
+
 Thanks for taking part at the workshop. Hopefully you took away a good overview over the Icinga collection and its features.
 
-If you need further assistance with Ansible or Icinga, feel free to reach out to [NETWAYS GmbH](https://netways.de). 
+If you need further assistance with Ansible or Icinga, feel free to reach out to [NETWAYS GmbH](https://netways.de).
