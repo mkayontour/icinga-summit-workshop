@@ -1,6 +1,6 @@
 ### Install Ansible
 
-Firstly install the Ansible on your system:
+Firstly install Ansible on your system:
 
 **DEB:**
 ```
