@@ -7,6 +7,13 @@ Either copy&paste the commands to your system or follow along as I demo the coll
 
 Don't try this on your production environment and if so I'm not responsible. ;)
 
+### Requirements
+
+If you want to participate in the hands-on. Please make sure to have a virtual machine ready.
+
+Operating System preferably Ubuntu or RHEL derivate, access to the internet.
+
+
 ### Agenda
 
 * [Install Ansible](docs/01-install-ansible.md)
