@@ -1,0 +1,44 @@
+icingadb_database_name: icingadb
+icingadb_database_user: icingadb
+icingadb_database_host: 127.0.0.1
+icingadb_database_password: icingadb
+icingadb_database_type: mysql
+icingadb_database_import_schema: true
+
+icingaweb2_db:
+  type: mysql
+  name: icingaweb
+  host: 127.0.0.1
+  user: icingaweb
+  password: icingaweb
+
+director_db_host: 127.0.0.1
+director_db_name: director
+director_db_username: director
+director_db_password: director
+
+mysql_packages:
+  - mariadb-client
+  - mariadb-server
+  - python3-mysqldb
+
+mysql_users:
+  - name: "{{ director_db_username }}" # Add this mysql user
+    host: "%"
+    password: "{{ director_db_password }}"
+    priv: "{{ director_db_name }}.*:ALL"
+  - name: "{{ icingadb_database_user }}"
+    host: "%"
+    password: "{{ icingadb_database_password }}"
+    priv: "{{ icingadb_database_name }}.*:ALL,GRANT"
+  - name: "{{ icingaweb2_db.user }}"
+    host: "%"
+    password: "{{ icingaweb2_db.password }}"
+    priv: "{{ icingaweb2_db.name }}.*:ALL"
+mysql_databases:
+  - name: "{{ director_db_name }}"  # Add this mysql database
+    encoding: utf8
+  - name: "{{ icingaweb2_db.name }}"
+  - name: "{{ icingadb_database_name }}"
+    collation: utf8mb4_general_ci
+    encoding: utf8mb4

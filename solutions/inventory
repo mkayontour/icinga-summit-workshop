@@ -1,0 +1,1 @@
+icinga-server ansible_connection=local

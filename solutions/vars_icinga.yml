@@ -1,0 +1,33 @@
+icinga2_features:
+  - name: api
+    ca_host: none
+    endpoints:
+      - name: "{{ ansible_fqdn }}"
+    zones:
+      - name: "main"
+        endpoints:
+          - "{{ ansible_fqdn }}"
+  - name: checker
+    state: present
+  - name: icingadb
+    state: present
+    host: 127.0.0.1
+    port: 6380
+  - name: mainlog
+    severity: information
+
+icinga2_objects:
+  icinga-server.localdomain:   # This needs to be your local FQDN. Check via "hostname -f"
+    - name: root
+      type: ApiUser
+      password: root
+      file: local.d/apiuser.conf
+      permissions:
+        - "*"
+
+icinga2_confd: local.d
+icinga2_config_directories:
+  - local.d/
+
+icinga_monitoring_plugins_check_commands:
+    - "all"

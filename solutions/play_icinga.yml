@@ -1,0 +1,25 @@
+---
+- name: Provision Icinga Server
+  hosts: icinga-server
+  become: true
+  vars_files:
+    - vars_database.yml
+    - vars_icinga.yml
+  vars:
+    icinga_repo_subscription_username: icinga-summit-2024
+    icinga_repo_subscription_password: Summit2024
+  roles:
+    - icinga.icinga.repos
+    - geerlingguy.mysql
+    - icinga.icinga.icinga2
+    - icinga.icinga.icingadb
+    - icinga.icinga.icingadb_redis
+    - icinga.icinga.monitoring_plugins
+
+- name: Second Part of play to setup icingaweb
+  hosts: icinga-server
+  vars_files:
+    - vars_database.yml
+    - vars_icingaweb.yml
+  roles:
+    - icinga.icinga.icingaweb2

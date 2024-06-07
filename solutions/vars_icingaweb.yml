@@ -1,0 +1,54 @@
+icingaweb2_admin_username: admin
+icingaweb2_admin_password: admin
+icingaweb2_db_import_schema: true
+
+icingaweb2_resources:
+  director_db:
+    type: db
+    db: mysql
+    host: "{{ director_db_host }}"
+    dbname: "{{ director_db_name }}"
+    username: "{{ director_db_username }}"
+    password: "{{ director_db_password }}"
+    charset: utf8
+  icingadb:
+    type: db
+    db: "{{ icingadb_database_type }}"
+    host: localhost
+    dbname: "{{ icingadb_database_name }}"
+    username: "{{ icingadb_database_user }}"
+    password: "{{ icingadb_database_password }}"
+    charset: utf8
+
+icingaweb2_modules:
+  director:
+    enabled: true
+    source: package
+    import_schema: true
+    run_kickstart: true
+    kickstart:
+      config:
+        endpoint: "{{ ansible_fqdn }}"
+        host: 127.0.0.1
+        username: root
+        password: root
+    config:
+      db:
+        resource: director_db
+  icingadb:
+    enabled: true
+    source: package
+    commandtransports:
+      instance01:
+        transport: api
+        host: 127.0.0.1
+        username: root
+        password: root
+    config:
+      icingadb:
+        resource: icingadb
+      redis:
+        tls: '0'
+    redis:
+      redis1:
+        host: localhost
